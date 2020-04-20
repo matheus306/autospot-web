@@ -1,0 +1,5 @@
+export * from './pesquisa.module'
+export * from './shared'
+export * from './pesquisa'
+export * from './pesquisa-routing-module'
+export * from './listar'

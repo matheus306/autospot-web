@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-end">
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+      <ul class="navbar-nav text-right">
+          <li class="nav-item active">
+              <a class="nav-link" href="#" style="color: darkgrey; font-size: small;">Comparar carros</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="color: darkgrey; font-size: small;">Quem somos</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+<div style="margin-top: 10%;">
+  <div class="container text-center">
+    <img src="../../../assets/auto-logo.png" style="margin-bottom: 100px;" class="img-fluid"/>
+    <div class="input-group w-50 d-flex justify-content-center align-items-center container">
+      <input type="text" (keydown.enter)="carregarTelaResultado()" class="form-control" placeholder="Pesquisar veículo" [(ngModel)]="filtro.descricao">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+            <i class="material-icons" (click)="carregarTelaResultado()" style="cursor: pointer;">search</i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar fixed-bottom">
+  <span style="font-size: 10px;"> @2020 </span>
+</nav>
