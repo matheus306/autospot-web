@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FiltroPesquisa } from '../shared';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pesquisa',

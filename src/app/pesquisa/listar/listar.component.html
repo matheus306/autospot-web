@@ -1,5 +1,23 @@
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let val of result">
-        {{val.codigo}} - {{val.descricao}}
-    </li>
-</ul>
+<nav class="navbar" style="background-color: #e3f2fd;">
+    <div class="form-inline my-2 my-lg-0 ml-auto">
+        <input type="text" style="width: 400px;" (keydown.enter)="filtrar()" class="form-control" placeholder="Pesquisar veículo" [(ngModel)]="filtro.descricao">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+              <i class="material-icons" (click)="filtrar()" style="cursor: pointer;">search</i>
+          </span>
+        </div>
+    </div>
+</nav>
+  
+<div class="container">
+    <div class="card mt-2" *ngFor="let val of result">
+        <div class="card-header">
+            {{val.descricao}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Marca: {{val.marca}}</h5>
+            <h5 class="card-title">Modelo: {{val.modelo}}</h5>
+            <h5 class="card-title">Ano: {{val.ano}}</h5>
+        </div>
+    </div>
+</div>
