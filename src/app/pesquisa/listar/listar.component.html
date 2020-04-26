@@ -1,4 +1,4 @@
-<nav class="navbar" style="background-color: #e3f2fd;">
+<nav class="navbar" style="background-color: #dee2e6;">
     <div class="form-inline my-2 my-lg-0 ml-auto">
         <input type="text" style="width: 400px;" (keydown.enter)="filtrar()" class="form-control" placeholder="Pesquisar veículo" [(ngModel)]="filtro.descricao">
         <div class="input-group-prepend">
@@ -8,7 +8,7 @@
         </div>
     </div>
 </nav>
-  
+
 <div class="container">
     <div class="card mt-2" *ngFor="let val of result">
         <div class="card-header">

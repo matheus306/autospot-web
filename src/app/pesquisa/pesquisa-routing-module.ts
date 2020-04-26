@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
 import { PesquisaComponent } from "./pesquisa"
 import { ListarComponent } from './listar'
+import { CarroComponent } from './carro'
 
 export const PesquisaRoutes : Routes = [
     {
@@ -18,5 +19,9 @@ export const PesquisaRoutes : Routes = [
     {
         path : 'result',
         component: ListarComponent
+    },
+    {
+        path : "carro/:id/:filtro",
+        component : CarroComponent
     }
 ]
