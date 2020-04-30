@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
     <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-        <ul class="navbar-nav text-left">
+        <ul class="navbar-nav text-left glyphicon glyphicon-chevron-left">
             <a [routerLink]="['/result', filtro]">
-                link to user component
-              </a>
+                {{ filtro.toUpperCase() }}
+            </a>
         </ul>
     </div>
 </nav>
@@ -11,7 +11,7 @@
 <div class="container">
     <div class="card mt-2" *ngFor="let val of dados">
         <div class="card-header">
-            {{val.url}}
+            <a href="{{val.url}}" target="_blank"> {{val.url}} </a>
         </div>
     </div>
 </div>
