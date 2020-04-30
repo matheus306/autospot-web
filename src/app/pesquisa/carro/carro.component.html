@@ -1,10 +1,8 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-        <ul class="navbar-nav text-left glyphicon glyphicon-chevron-left">
-            <a [routerLink]="['/result', filtro]">
-                {{ filtro.toUpperCase() }}
-            </a>
-        </ul>
+<nav class="navbar" style="background-color: #dee2e6;">
+    <div class="form-inline my-2 my-lg-0">
+        <a [routerLink]="['/result', filtro]">
+            {{ '< ' + filtro.toUpperCase() }}
+        </a>
     </div>
 </nav>
 
