@@ -12,7 +12,7 @@
 <div class="container">
     <div class="card mt-2" *ngFor="let val of result">
         <div class="card-header">
-            {{val.descricao}}
+            <a [routerLink]="['/carro', val.codigo, filtro.descricao]">{{val.descricao}}</a>
         </div>
         <div class="card-body">
             <h5 class="card-title">Marca: {{val.marca}}</h5>

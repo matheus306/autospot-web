@@ -17,7 +17,6 @@ export class PesquisaComponent implements OnInit {
   ngOnInit(){}
 
   carregarTelaResultado(){
-    this.router.navigateByUrl(`/result?filtro=${this.filtro.descricao}`);
+    this.router.navigateByUrl(`/result/${this.filtro.descricao}`);
   }
-
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'
 
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { PesquisaService } from './shared'
@@ -17,7 +18,8 @@ import { CarroComponent } from './carro';
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [
     PesquisaService

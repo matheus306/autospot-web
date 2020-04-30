@@ -10,21 +10,18 @@ import { ActivatedRoute } from '@angular/router';
 export class ListarComponent implements OnInit {
 
   filtro = new FiltroPesquisa();
-  result = [];
+  result : any = [];
 
   constructor(private service : PesquisaService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      this.filtro.descricao = params['filtro'];
-      this.filtrar()
-    });
+    this.filtro.descricao = this.route.snapshot.params.filtro;
+    this.filtrar()
   }
 
   filtrar() {
     this.service.pesquisarCarro(this.filtro).subscribe((data) => {
-      this.result = [];
-      this.result = this.result.concat(data);
+      this.result = data;
     });
   }
 }

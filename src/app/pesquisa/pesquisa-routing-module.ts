@@ -13,11 +13,7 @@ export const PesquisaRoutes : Routes = [
         component: PesquisaComponent
     },
     {
-        path : 'result',
-        redirectTo : 'pesquisa/listar'
-    },
-    {
-        path : 'result',
+        path : 'result/:filtro',
         component: ListarComponent
     },
     {
